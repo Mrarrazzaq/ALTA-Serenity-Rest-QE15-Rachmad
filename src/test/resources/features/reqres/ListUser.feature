@@ -10,4 +10,4 @@ Feature: Get List Users API
     |2   |
 
 #    Catatan, kalo mau pagenya cuma satu misal "2", hapus tulisan Outline <page> dan example ganti dengan 2
-  # Kalau tipenya string ganti menjadi <"string">
+  # Kalau tipenya string ganti menjadi "<string>"

@@ -10,6 +10,7 @@ import java.io.File;
 public class ReqresAPI {
     public static String LIST_USERS = Constants.BASE_URL+"/api/users?page={page}";
     public static String CREATE_USER = Constants.BASE_URL+"/api/users";
+    public static String USER_WITH_ID = Constants.BASE_URL+"/api/users/{id}";
 
     @Step("Get list users")
     public void getlistUsers(int page){
@@ -22,5 +23,17 @@ public class ReqresAPI {
         SerenityRest.given()
                 .contentType(ContentType.JSON)
                 .body(json);
+    }
+    @Step("Update_user")
+    public void putUdpateUser(int id, File json){
+        SerenityRest.given()
+                .pathParam("id", id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+    @Step("Delete a user")
+    public void deleteUser(int id){
+        SerenityRest.given()
+                .pathParam("id",id);
     }
 }
