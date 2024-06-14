@@ -48,10 +48,17 @@ public class ResponsesSteps {
                 .body(ReqresResponses.FIRST_NAME, equalTo(first_name))
                 .body(ReqresResponses.LAST_NAME, equalTo(last_name));
     }
+    @And("Response body page should be id {int} and token {string}")
+    public void responseBodyPageShouldBeIdIdAndToken(int id, String token) {
+        SerenityRest.and()
+                .body(ReqresResponses.ID, equalTo(id))
+                .body(ReqresResponses.TOKEN, equalTo(token));
+    }
 
     @And("Validate json schema {string}")
     public void validateJsonSchema(String fileName) {
         File jsonFile = new File(Constants.JSON_SCHEMA+fileName);
         SerenityRest.and().body(JsonSchemaValidator.matchesJsonSchema(jsonFile));
     }
+
 }
