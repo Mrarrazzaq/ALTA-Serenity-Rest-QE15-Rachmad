@@ -26,8 +26,8 @@ public class RegisterUserSteps {
         SerenityRest.when().post(ReqresAPI.REGISTER_USER);
     }
 
-    @Given("Register new user with invalid fiel json {string}")
-    public void registerNewUserWithInvalidFielJson(String fileName) {
+    @Given("Register new user with invalid file json {string}")
+    public void registerNewUserWithInvalidFileJson(String fileName) {
         File fileJson = new File(Constants.REQ_BODY+fileName);
         reqresAPI.postRegisterUser(fileJson);
     }

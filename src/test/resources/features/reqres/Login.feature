@@ -7,7 +7,7 @@ Feature: Login user API
     And Response body name should be token "<token>"
     And Validate json schema "login_valid_user_json_schema.json"
     Examples:
-    |fileName       |token            |
+    |fileName       |token                  |
     |login_valid_user.json|QpwL5tke4Pnpja7X4|
 
     @tugas

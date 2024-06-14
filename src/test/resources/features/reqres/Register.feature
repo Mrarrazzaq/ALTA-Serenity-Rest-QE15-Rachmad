@@ -12,7 +12,7 @@ Feature: Register user reqres API
 
     @tugas
     Scenario Outline: Register Unsuccessful to regres API
-      Given Register new user with invalid fiel json "<fileName>"
+      Given Register new user with invalid file json "<fileName>"
       When Send request post register user
       Then Status code should be 400
       And Response body name should be error "<error>"

@@ -7,7 +7,7 @@ Feature: Update User API
     And Response body name should be "Rahmad Edit" and job should be "QE Engineer Edit"
 
     @tugas
-    Scenario Outline: Update user using patch methode with valid parameter id and valid json
+    Scenario Outline: Update user using patch methode with valid parameter id and valid json file
       Given Update user with parameter id 2 and valid json "<fileName>"
       When Send request patch update user
       Then Status code should be 200

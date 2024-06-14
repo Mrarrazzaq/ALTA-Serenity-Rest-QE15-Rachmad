@@ -1,3 +1,4 @@
+@Latihan
 Feature: Create user API
   Scenario Outline: Create new user with valid json
     Given Create new user with valid file json "<fileName>"
